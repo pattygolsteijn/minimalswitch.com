@@ -1,0 +1,31 @@
+source: src
+destination: public
+
+# --------------------------------------
+# Generic site settings
+
+permalink: pretty
+relative_permalinks: true
+paginate: 10
+
+title: Minimal Switch
+baseurl: http://minimalswitch.com
+
+excerpt_separator: "" # Workaround for http://blog.slaks.net/2013-08-09/jekyll-tag-was-never-closed
+
+# --------------------------------------
+# Asset settings
+
+assets:
+  css_compressor: sass
+  sources:
+    - _assets/images
+    - _assets/javascripts
+    - _assets/stylesheets
+    - _assets/stylesheets/vendor/font-awesome/font
+
+image:
+  presets:
+    full:
+      attr:
+        class: img-responsive

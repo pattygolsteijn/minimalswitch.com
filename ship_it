@@ -1,0 +1,13 @@
+#!/bin/sh
+
+while true; do
+  read -p "Do you want to run 'jekyll build' first to generate the site? (y/n) " yn
+  case $yn in
+    [Yy]* ) bundle exec jekyll build; break;;
+    [Nn]* ) break;;
+    * ) echo "Please answer 'y' or 'n'.";;
+  esac
+done
+
+cd public
+git add -A && git commit && git push
